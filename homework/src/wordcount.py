@@ -1,7 +1,7 @@
 # obtain a list of files in the input directory
 import os
 
-from .write_count_words import write_count_words
+from ._internals.write_count_words import write_count_words
 
 
 def read_all_lines():
