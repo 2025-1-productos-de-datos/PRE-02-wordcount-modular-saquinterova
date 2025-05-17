@@ -4,19 +4,19 @@ import os
 
 def read_all_lines():
      all_lines = []
-     input_file_list = os.listdir('data/input/')
+     input_file_list = os.listdir("data/input/")
      for filename in input_file_list:
-         with open(filename, "r", encoding="utf-8") as f:
+         with open(('data/input/'+filename), "r", encoding="utf-8") as f:
               lines = f.readlines()
               all_lines.extend(lines)
      return lines
 
 def main():
     all_lines = read_all_lines()
-
+    input_file_list = os.listdir("data/input/")
     # count the frequency of the words in the files in the input directory
     counter={}
-    for filename in all_lines:
+    for filename in input_file_list:
         with open('data/input/'+filename) as f:
             for l in f:
                 for w in l.split( ):
